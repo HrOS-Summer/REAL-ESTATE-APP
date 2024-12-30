@@ -1,0 +1,112 @@
+@use "../../responsive.scss" as res;
+
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        transition: all 0.4s ease;
+
+        @include res.sm {
+            display:  none;
+        }
+
+        &:hover {
+            scale: 1.05;
+        }
+    }
+
+    .left {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 28px;
+            }
+
+            span {
+                @include res.md {
+                    display: none;
+                }
+
+                @include res.sm {
+                    display: initial; //display name again
+                }
+            }
+        }
+    }
+    .right {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        background-color: #fcf5f3;
+
+        @include res.md {
+            background-color: transparent;
+        }
+
+        a {
+            margin: 20px;
+            padding: 12px 24px;
+        }
+
+        .register {
+            background-color: #fece51;
+        }
+
+        .menuIcon {
+            display: none;
+            z-index: 999;
+            
+            img {
+                width: 36px;
+                height: 36px;
+                cursor: pointer;
+            }
+
+            @include res.sm {
+                display: initial;
+            }
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            right: -50%;
+            height: 100vh;
+            width: 50%;
+            background-color: #000;
+            color: #fff;
+            transition: all 0.7s ease;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+
+            &.active {
+                right: 0;
+            }
+
+            @include res.sm {
+                a {
+                    display: initial;
+                }
+            }
+        }
+    }
+}

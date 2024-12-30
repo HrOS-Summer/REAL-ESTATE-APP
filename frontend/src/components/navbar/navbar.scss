@@ -9,13 +9,13 @@ nav {
     a {
         transition: all 0.4s ease;
 
-        @include res.sm {
-            display:  none;
-        }
-
         &:hover {
             scale: 1.05;
         }
+
+        @include res.sm {
+            display:  none;
+        }        
     }
 
     .left {

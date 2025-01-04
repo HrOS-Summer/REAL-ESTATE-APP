@@ -1,10 +1,11 @@
-import Slider from "../../components/slider/Slider";
 import "./singlePage.scss";
+import Slider from "../../components/slider/Slider";
+import Map from "../../components/map/Map";
 import { singlePostData, userData } from "../../lib/dummydata";
 
-const SinglePage = () => {
-    return (
-        <div className="singlePage">
+function SinglePage() {
+  return (
+    <div className="singlePage">
       <div className="details">
         <div className="wrapper">
           <Slider images={singlePostData.images} />
@@ -93,9 +94,9 @@ const SinglePage = () => {
             </div>
           </div>
           <p className="title">Location</p>
-          {/* <div className="mapContainer">
+          <div className="mapContainer">
             <Map items={[singlePostData]} />
-          </div> */}
+          </div>
           <div className="buttons">
             <button>
               <img src="/chat.png" alt="" />
@@ -109,7 +110,7 @@ const SinglePage = () => {
         </div>
       </div>
     </div>
-    )
+  );
 }
 
 export default SinglePage;

@@ -1,4 +1,4 @@
-@use "../../responsive.scss" as res;
+@import "../../responsive.scss";
 
 .slider {
   width: 100%;
@@ -6,7 +6,7 @@
   display: flex;
   gap: 20px;
 
-  @include res.sm {
+  @include sm {
     height: 280px;
   }
 
@@ -31,11 +31,11 @@
       img {
         width: 50px;
 
-        @include res.md {
+        @include md {
           width: 30px;
         }
 
-        @include res.sm {
+        @include sm {
           width: 20px;
         }
 
@@ -77,7 +77,7 @@
   .bigImage {
     flex: 3;
 
-    @include res.sm {
+    @include sm {
       flex: 2;
     }
   }
@@ -88,14 +88,14 @@
     justify-content: space-between;
     gap: 20px;
 
-    @include res.sm {
+    @include sm {
       flex: 1;
     }
 
     img {
       height: 100px;
 
-      @include res.sm {
+      @include sm {
         height: 80px;
       }
     }

@@ -1,4 +1,4 @@
-@import "../../responsive.scss";
+@use "../../responsive.scss" as res;
 
 .listPage {
   display: flex;
@@ -23,7 +23,7 @@
     height: 100%;
     background-color: #fcf5f3;
 
-    @include md{
+    @include res.md{
       display: none;
     }
   }

@@ -1,4 +1,4 @@
-@import "../../responsive.scss";
+@use "../../responsive.scss" as res;
 
 .homePage {
   display: flex;
@@ -15,22 +15,22 @@
       gap: 50px;
       height: 100%;
 
-      @include lg{
+      @include res.lg{
         padding-right: 50px;
       }
 
-      @include md{
+      @include res.md{
         padding: 0;
       }
 
-      @include sm{
+      @include res.sm{
         justify-content: flex-start;
       }
 
       .title {
         font-size: 64px;
 
-        @include lg {
+        @include res.lg {
           font-size: 48px;
         }
       }
@@ -39,14 +39,14 @@
         display: flex;
         justify-content: space-between;
 
-        @include sm {
+        @include res.sm {
           display: none;
         }
 
         h1 {
           font-size: 36px;
 
-          @include lg {
+          @include res.lg {
             font-size: 32px;
           }
         }
@@ -66,7 +66,7 @@
     display: flex;
     align-items: center;
 
-    @include md {
+    @include res.md {
       display: none;
     }
 
@@ -75,7 +75,7 @@
       position: absolute;
       right: 0;
 
-      @include lg {
+      @include res.lg {
         width: 105%;
       }
     }
